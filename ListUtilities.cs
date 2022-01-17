@@ -35,9 +35,9 @@ namespace Gcode
 
 
         /// <summary>
-        /// The method checks if the objects of list2 are all contained in list1 
+        /// The method checks if the objects of List2 are all contained in List1 
         /// </summary>
-        /// <param name="List1">Main list in which to search for the points of List 2 </param>
+        /// <param name="List1">Main list in which to search for the points of List2 </param>
         /// <param name="List2">List of which points are searched for in List1 </param>
         /// <returns>The method returns true if all points in List2 are contained in List1 </returns>
         public bool Contains_AllItems(List<object> List1, List<object> List2)
@@ -61,6 +61,18 @@ namespace Gcode
             }
 
             return result;
+        }
+        
+        
+        /// <summary>
+        /// The method checks if the objects of List2 are all contained in List1 
+        /// </summary>
+        /// <param name="List1">Main list in which to search for the points of List2 </param>
+        /// <param name="List2">List of which points are searched for in List1 </param>
+        /// <returns>The method returns true if all points in List2 are contained in List1 </returns>
+        public static bool ContainsAll<T>(IEnumerable<T> List1, IEnumerable<T> List2)
+        {
+            return List2.All(value => List1.Contains(value));
         }
 
     }
