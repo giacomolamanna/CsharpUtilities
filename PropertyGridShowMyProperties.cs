@@ -32,3 +32,10 @@ public class MyProperties
 //show in propertygrid only my object's properties
 MyTextBox myTextBox = new MyTextBox();
 this.propertyGridControl.SelectedObject = myTextBox.MyProperties;
+
+
+
+
+
+
+
